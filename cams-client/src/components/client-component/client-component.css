@@ -1,0 +1,19 @@
+.content .header 
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.content .header h5
+{
+    margin: 0;
+    padding: 0.25rem;
+}
+
+.content table thead tr th,
+.content table tbody tr td
+{
+    font-size: 14px;
+    padding: 0.4rem;
+}

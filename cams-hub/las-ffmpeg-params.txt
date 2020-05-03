@@ -1,0 +1,1 @@
+ffmpeg -rtsp_transport tcp -i rtsp://freja.hiof.no:1935/rtplive/definst/hessdalen03.stream -framerate 7 -pix_fmt yuv420p -codec:v mpeg1video -f mpegts http://hub-server:8084/stream/d408b003-9f4c-4cba-9b92-20119a758771

@@ -1,0 +1,305 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.1 225528  9012 ?        Ss   10:30   0:02 /sbin/init splash
+root         2  0.0  0.0      0     0 ?        S    10:30   0:00 [kthreadd]
+root         4  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        I<   10:30   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S    10:30   0:04 [ksoftirqd/0]
+root         8  0.0  0.0      0     0 ?        I    10:30   0:17 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I    10:30   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S    10:30   0:00 [migration/0]
+root        11  0.0  0.0      0     0 ?        S    10:30   0:00 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    10:30   0:00 [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S    10:30   0:00 [cpuhp/1]
+root        14  0.0  0.0      0     0 ?        S    10:30   0:00 [watchdog/1]
+root        15  0.0  0.0      0     0 ?        S    10:30   0:00 [migration/1]
+root        16  0.0  0.0      0     0 ?        S    10:30   0:00 [ksoftirqd/1]
+root        18  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/1:0H]
+root        19  0.0  0.0      0     0 ?        S    10:30   0:00 [cpuhp/2]
+root        20  0.0  0.0      0     0 ?        S    10:30   0:00 [watchdog/2]
+root        21  0.0  0.0      0     0 ?        S    10:30   0:00 [migration/2]
+root        22  0.0  0.0      0     0 ?        S    10:30   0:00 [ksoftirqd/2]
+root        24  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/2:0H]
+root        25  0.0  0.0      0     0 ?        S    10:30   0:00 [cpuhp/3]
+root        26  0.0  0.0      0     0 ?        S    10:30   0:00 [watchdog/3]
+root        27  0.0  0.0      0     0 ?        S    10:30   0:00 [migration/3]
+root        28  0.0  0.0      0     0 ?        S    10:30   0:00 [ksoftirqd/3]
+root        30  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/3:0H]
+root        31  0.0  0.0      0     0 ?        S    10:30   0:00 [cpuhp/4]
+root        32  0.0  0.0      0     0 ?        S    10:30   0:00 [watchdog/4]
+root        33  0.0  0.0      0     0 ?        S    10:30   0:00 [migration/4]
+root        34  0.0  0.0      0     0 ?        S    10:30   0:00 [ksoftirqd/4]
+root        36  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/4:0H]
+root        37  0.0  0.0      0     0 ?        S    10:30   0:00 [cpuhp/5]
+root        38  0.0  0.0      0     0 ?        S    10:30   0:00 [watchdog/5]
+root        39  0.0  0.0      0     0 ?        S    10:30   0:00 [migration/5]
+root        40  0.0  0.0      0     0 ?        S    10:30   0:00 [ksoftirqd/5]
+root        42  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/5:0H]
+root        43  0.0  0.0      0     0 ?        S    10:30   0:00 [cpuhp/6]
+root        44  0.0  0.0      0     0 ?        S    10:30   0:00 [watchdog/6]
+root        45  0.0  0.0      0     0 ?        S    10:30   0:00 [migration/6]
+root        46  0.0  0.0      0     0 ?        S    10:30   0:00 [ksoftirqd/6]
+root        48  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/6:0H]
+root        49  0.0  0.0      0     0 ?        S    10:30   0:00 [cpuhp/7]
+root        50  0.0  0.0      0     0 ?        S    10:30   0:00 [watchdog/7]
+root        51  0.0  0.0      0     0 ?        S    10:30   0:00 [migration/7]
+root        52  0.0  0.0      0     0 ?        S    10:30   0:00 [ksoftirqd/7]
+root        54  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/7:0H]
+root        55  0.0  0.0      0     0 ?        S    10:30   0:00 [kdevtmpfs]
+root        56  0.0  0.0      0     0 ?        I<   10:30   0:00 [netns]
+root        57  0.0  0.0      0     0 ?        S    10:30   0:00 [rcu_tasks_kthre]
+root        58  0.0  0.0      0     0 ?        S    10:30   0:00 [kauditd]
+root        61  0.0  0.0      0     0 ?        S    10:30   0:00 [khungtaskd]
+root        62  0.0  0.0      0     0 ?        S    10:30   0:00 [oom_reaper]
+root        63  0.0  0.0      0     0 ?        I<   10:30   0:00 [writeback]
+root        64  0.0  0.0      0     0 ?        S    10:30   0:00 [kcompactd0]
+root        65  0.0  0.0      0     0 ?        SN   10:30   0:00 [ksmd]
+root        66  0.0  0.0      0     0 ?        SN   10:30   0:00 [khugepaged]
+root        67  0.0  0.0      0     0 ?        I<   10:30   0:00 [crypto]
+root        68  0.0  0.0      0     0 ?        I<   10:30   0:00 [kintegrityd]
+root        69  0.0  0.0      0     0 ?        I<   10:30   0:00 [kblockd]
+root        72  0.0  0.0      0     0 ?        I<   10:30   0:00 [ata_sff]
+root        73  0.0  0.0      0     0 ?        I<   10:30   0:00 [md]
+root        74  0.0  0.0      0     0 ?        I<   10:30   0:00 [edac-poller]
+root        75  0.0  0.0      0     0 ?        I<   10:30   0:00 [devfreq_wq]
+root        76  0.0  0.0      0     0 ?        I<   10:30   0:00 [watchdogd]
+root        83  0.1  0.0      0     0 ?        S    10:30   0:30 [kswapd0]
+root        84  0.0  0.0      0     0 ?        S    10:30   0:00 [ecryptfs-kthrea]
+root       126  0.0  0.0      0     0 ?        I<   10:30   0:00 [kthrotld]
+root       127  0.0  0.0      0     0 ?        I<   10:30   0:00 [acpi_thermal_pm]
+root       134  0.0  0.0      0     0 ?        I<   10:30   0:00 [ipv6_addrconf]
+root       143  0.0  0.0      0     0 ?        I<   10:30   0:00 [kstrp]
+root       161  0.0  0.0      0     0 ?        I<   10:30   0:00 [charger_manager]
+root       211  0.0  0.0      0     0 ?        S    10:30   0:00 [scsi_eh_0]
+root       212  0.0  0.0      0     0 ?        I<   10:30   0:00 [scsi_tmf_0]
+root       213  0.0  0.0      0     0 ?        S    10:30   0:00 [scsi_eh_1]
+root       214  0.0  0.0      0     0 ?        I<   10:30   0:00 [scsi_tmf_1]
+root       215  0.0  0.0      0     0 ?        S    10:30   0:00 [scsi_eh_2]
+root       216  0.0  0.0      0     0 ?        I<   10:30   0:00 [scsi_tmf_2]
+root       217  0.0  0.0      0     0 ?        S    10:30   0:00 [scsi_eh_3]
+root       218  0.0  0.0      0     0 ?        I<   10:30   0:00 [scsi_tmf_3]
+root       220  0.0  0.0      0     0 ?        S    10:30   0:00 [scsi_eh_4]
+root       221  0.0  0.0      0     0 ?        I<   10:30   0:00 [scsi_tmf_4]
+root       222  0.0  0.0      0     0 ?        S    10:30   0:00 [scsi_eh_5]
+root       223  0.0  0.0      0     0 ?        I<   10:30   0:00 [scsi_tmf_5]
+root       228  0.0  0.0      0     0 ?        I<   10:30   0:00 [nvkm-disp]
+root       231  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/2:1H]
+root       232  0.0  0.0      0     0 ?        I<   10:30   0:00 [ttm_swap]
+root       334  0.0  0.0      0     0 ?        S    10:30   0:03 [jbd2/sda5-8]
+root       335  0.0  0.0      0     0 ?        I<   10:30   0:00 [ext4-rsv-conver]
+root       368  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/6:1H]
+root       384  0.0  0.2 103120 21684 ?        S<s  10:30   0:00 /lib/systemd/systemd-journald
+root       391  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/1:1H]
+root       398  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/7:1H]
+root       411  0.0  0.0  97708  1768 ?        Ss   10:30   0:00 /sbin/lvmetad -f
+root       414  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/4:1H]
+root       415  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/5:1H]
+root       416  0.0  0.0  36448  6296 ?        Ss   10:30   0:04 /lib/systemd/systemd-udevd
+root       501  0.0  0.0      0     0 ?        I<   10:30   0:01 [kworker/3:1H]
+root       521  0.0  0.0      0     0 ?        I<   10:30   0:00 [kworker/0:1H]
+root       538  0.0  0.0      0     0 ?        I<   10:30   0:00 [led_workqueue]
+root       700  0.0  0.0      0     0 ?        I<   10:31   0:00 [cfg80211]
+systemd+   799  0.0  0.0  71280  6164 ?        Ss   10:31   0:01 /lib/systemd/systemd-resolved
+root       839  0.0  0.0  31328  2640 ?        Ss   10:31   0:00 /usr/sbin/cron -f
+root       841  0.0  0.1 503084 11352 ?        Ssl  10:31   0:02 /usr/lib/udisks2/udisksd
+root       847  0.0  0.1 353532  8792 ?        Ssl  10:31   0:00 /usr/sbin/ModemManager
+root       853  0.0  0.0 287640  6380 ?        Ssl  10:31   0:00 /usr/lib/accountsservice/accounts-daemon
+avahi      864  0.0  0.0  47264  2852 ?        Ss   10:31   0:00 avahi-daemon: running [pedro-desktop.local]
+root       899  0.0  0.0 110516  3492 ?        Ssl  10:31   0:01 /usr/sbin/irqbalance --foreground
+root       902  0.0  0.0  70600  5692 ?        Ss   10:31   0:00 /lib/systemd/systemd-logind
+message+   907  0.0  0.0  51468  5336 ?        Ss   10:31   0:04 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+avahi      940  0.0  0.0  47076   340 ?        S    10:31   0:00 avahi-daemon: chroot helper
+root       961  0.0  0.0   4552   832 ?        Ss   10:31   0:00 /usr/sbin/acpid
+root       975  0.0  0.0  45468  7712 ?        Ss   10:31   0:01 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root       995  0.0  0.1 170476 13552 ?        Ssl  10:31   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+syslog    1003  0.0  0.0 263036  4220 ?        Ssl  10:31   0:00 /usr/sbin/rsyslogd -n
+root      1016  0.0  0.1 485344 14924 ?        Ssl  10:31   0:06 /usr/sbin/NetworkManager --no-daemon
+root      1146  0.0  0.1 292828  8420 ?        Ssl  10:31   0:00 /usr/lib/policykit-1/polkitd --no-debug
+root      1369  0.0  0.0 364228  6528 ?        Ssl  10:31   0:00 /usr/sbin/lightdm
+root      1373  0.0  0.4 1768744 35308 ?       Ssl  10:31   0:04 /usr/bin/containerd
+root      1414  2.7  1.2 520984 98860 tty7     Ssl+ 10:31  11:13 /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+root      1446  0.0  0.0  16188  1604 tty1     Ss+  10:31   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+mysql     1467  0.0  2.3 2074488 186760 ?      Sl   10:31   0:14 /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid
+root      1539  0.0  0.0 266804  7280 ?        Sl   10:31   0:00 lightdm --session-child 12 15
+pedro     1544  0.0  0.0  77012  7424 ?        Ss   10:31   0:00 /lib/systemd/systemd --user
+pedro     1554  0.0  0.0 132456  2420 ?        S    10:31   0:00 (sd-pam)
+pedro     1572  0.0  0.4 680548 34576 ?        Ssl  10:31   0:00 cinnamon-session --session cinnamon
+pedro     1587  0.0  0.0  50952  4572 ?        Ss   10:31   0:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+pedro     1639  0.0  0.0  11304    40 ?        Ss   10:31   0:00 /usr/bin/ssh-agent /usr/bin/im-launch cinnamon-session-cinnamon
+pedro     1653  0.0  0.0 349444  5516 ?        Ssl  10:31   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+pedro     1658  0.0  0.0  50188  3720 ?        S    10:31   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+pedro     1660  0.0  0.0 220708  6256 ?        Sl   10:31   0:03 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+pedro     1669  0.0  0.0 429288  7552 ?        SLl  10:31   0:01 /usr/bin/gnome-keyring-daemon --start --components=secrets
+pedro     1679  0.0  0.1 446296 15104 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-print-notifications
+pedro     1680  0.0  0.1 395452 12720 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-screensaver-proxy
+pedro     1683  0.0  0.2 726572 16264 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-power
+pedro     1684  0.0  0.1 484576 13692 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-xrandr
+pedro     1691  0.0  0.1 397784 14888 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-mouse
+pedro     1694  0.0  0.1 457252 13340 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-wacom
+pedro     1696  0.0  0.1 321608 14176 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-clipboard
+pedro     1698  0.0  0.1 448380 14004 ?        Sl   10:31   0:02 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-keyboard
+pedro     1702  0.0  0.2 780548 17456 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-media-keys
+pedro     1704  0.0  0.1 475908 15724 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-automount
+pedro     1709  0.2  0.1 1949920 10740 ?       S<l  10:31   0:56 /usr/bin/pulseaudio --start --log-target=syslog
+rtkit     1726  0.0  0.0 183504  2684 ?        SNsl 10:31   0:00 /usr/lib/rtkit/rtkit-daemon
+root      1728  0.0  0.0 315316  6808 ?        Ssl  10:31   0:00 /usr/lib/upower/upowerd
+pedro     1735  0.0  0.1 575696 13300 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-color
+pedro     1736  0.0  0.1 399288 12708 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-xsettings
+pedro     1737  0.0  0.1 397788 12804 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-a11y-settings
+pedro     1738  0.0  0.1 321628 12624 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-cursor
+pedro     1739  0.0  0.1 397792 14708 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-a11y-keyboard
+pedro     1740  0.0  0.1 545212 14208 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-orientation
+pedro     1741  0.0  0.1 397748 13000 ?        Sl   10:31   0:01 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-housekeeping
+pedro     1742  0.0  0.2 481700 21572 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-background
+pedro     1743  0.0  0.2 841372 16204 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-sound
+pedro     1747  0.0  0.0 358912  5860 ?        Ssl  10:31   0:00 /usr/lib/gvfs/gvfsd
+pedro     1760  0.0  0.1 501936  8112 ?        Sl   10:31   0:00 /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-printer
+pedro     1796  0.0  0.0 188024  4956 ?        Sl   10:31   0:00 /usr/lib/dconf/dconf-service
+pedro     1858  0.0  0.0 416116  4576 ?        Sl   10:31   0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+pedro     1860  0.0  0.1 373748  8144 ?        Ssl  10:31   0:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+colord    1865  0.0  0.1 317900 12804 ?        Ssl  10:31   0:00 /usr/lib/colord/colord
+pedro     1874  0.0  0.0 281944  5640 ?        Ssl  10:31   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+pedro     1895  0.0  0.0 371996  5560 ?        Ssl  10:31   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+pedro     1900  0.0  0.0 269024  5316 ?        Ssl  10:31   0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+pedro     1911  0.0  0.0 267284  5124 ?        Ssl  10:31   0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+pedro     1920  0.0  0.1 767948 12940 ?        Sl   10:31   0:00 /usr/lib/gnome-online-accounts/goa-daemon
+pedro     1941  0.0  0.2 184520 22276 ?        S    10:31   0:00 /usr/bin/python3 /usr/bin/cinnamon-launcher
+pedro     1948  0.0  0.0 296844  5964 ?        Sl   10:31   0:00 /usr/lib/gnome-online-accounts/goa-identity-service
+pedro     1953  5.7  1.8 3777568 147608 ?      Sl   10:31  23:11 cinnamon --replace
+root      1956  0.0  0.0  14704  2540 ?        Ss   10:31   0:00 /sbin/mount.ntfs /dev/sda1 /media/pedro/6A24A34224A30FDD -o rw,nodev,nosuid,uid=1000,gid=1000,uhelper=udisks2
+pedro     1983  0.0  0.3 434580 25024 ?        Sl   10:31   0:00 blueberry-obex-agent
+pedro     1987  0.0  0.5 1206380 40744 ?       Sl   10:31   0:01 nemo-desktop
+pedro     1988  0.0  0.3 648764 28804 ?        Sl   10:31   0:07 nm-applet
+pedro     1989  0.0  0.2 409744 22108 ?        Sl   10:31   0:00 /usr/bin/python3 /usr/bin/cinnamon-killer-daemon
+pedro     1990  0.0  0.2 323456 16228 ?        Sl   10:31   0:00 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+pedro     1996  0.0  0.0  82728  4664 ?        Ss   10:31   0:00 /usr/lib/bluetooth/obexd
+pedro     2015  0.0  0.0 197720  5836 ?        Ssl  10:31   0:00 /usr/lib/gvfs/gvfsd-metadata
+pedro     2052  0.0  0.5 714756 44208 ?        Sl   10:31   0:05 cinnamon-screensaver
+pedro     2065  0.0  0.0 361536  6632 ?        Sl   10:31   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.32 /org/gtk/gvfs/exec_spaw/0
+root      2086  0.0  0.8 1764788 71792 ?       Ssl  10:31   0:18 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+kernoops  2140  0.0  0.0  56940  2372 ?        Ss   10:31   0:00 /usr/sbin/kerneloops --test
+kernoops  2148  0.0  0.0  56940  2416 ?        Ss   10:31   0:00 /usr/sbin/kerneloops
+pedro     2356  0.0  0.5 736716 43964 ?        Sl   10:31   0:00 mintUpdate
+pedro     2591  0.0  0.3 248036 27564 ?        Sl   10:32   0:01 /usr/bin/python3 /usr/share/system-config-printer/applet.py
+root      2618  0.0  0.0  25992  6292 ?        S    10:32   0:00 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-wlx542aa28b1607.pid -lf /var/lib/NetworkManager/dhclient-fc5553db-e519-4845-9c6a-af8144a912c7-wlx542aa28b1607.lease -cf /var/lib/NetworkManager/dhclient-wlx542aa28b1607.conf wlx542aa28b1607
+pedro     3399  0.1  1.0 1209976 85352 ?       Sl   10:35   0:42 /usr/share/code/code --no-sandbox --unity-launch
+pedro     3402  0.0  0.1 366480 15840 ?        S    10:35   0:00 /usr/share/code/code --type=zygote --no-sandbox
+pedro     3431  0.0  0.9 557636 72708 ?        Sl   10:35   0:09 /usr/share/code/code --type=gpu-process --field-trial-handle=7303760734043004780,3366505095309131982,131072 --disable-features=LayoutNG,SpareRendererForSitePerProcess --disable-color-correct-rendering --no-sandbox --gpu-preferences=IAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --service-request-channel-token=17998297344372682155
+pedro     3964  0.0  0.7 777528 57040 ?        Sl   10:35   0:04 /usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=7303760734043004780,3366505095309131982,131072 --disable-features=LayoutNG,SpareRendererForSitePerProcess --disable-gpu-compositing --lang=pt-BR --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --app-path=/usr/share/code/resources/app --node-integration --no-sandbox --no-zygote --background-color=#1e1e1e --disable-blink-features=Auxclick --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=7629756520521482279 --renderer-client-id=6 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro     4512  0.0  0.0 437640  6744 ?        Sl   10:36   0:00 /usr/lib/gvfs/gvfsd-network --spawner :1.32 /org/gtk/gvfs/exec_spaw/2
+root      4879  0.0  0.0 100588  5572 ?        Ss   10:36   0:00 /usr/sbin/cupsd -l
+root      4880  0.0  0.1 303652  8516 ?        Ssl  10:36   0:00 /usr/sbin/cups-browsed
+pedro     4920  0.0  0.0 374472  6480 ?        Sl   10:36   0:00 /usr/lib/gvfs/gvfsd-dnssd --spawner :1.32 /org/gtk/gvfs/exec_spaw/5
+pedro     4952  0.1  2.1 978548 171404 ?       SLl  10:36   0:34 /usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=7303760734043004780,3366505095309131982,131072 --disable-features=LayoutNG,SpareRendererForSitePerProcess --disable-gpu-compositing --lang=pt-BR --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --app-path=/usr/share/code/resources/app --node-integration --webview-tag --no-sandbox --no-zygote --background-color=#1e1e1e --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=18096274099698095276 --renderer-client-id=9 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro     4978  0.0  0.8 710400 70712 ?        Sl   10:36   0:08 /usr/share/code/code --inspect-port=0 /usr/share/code/resources/app/out/bootstrap-fork --type=extensionHost
+pedro     4979  0.0  0.0  26000  7560 pts/0    Ss   10:36   0:00 /bin/bash
+pedro     5165  0.0  0.3 591612 30768 ?        Sl   10:36   0:00 /usr/share/code/code /usr/share/code/resources/app/out/bootstrap-fork --type=watcherService
+pedro     5253  0.0  0.5 598712 47176 ?        Sl   10:36   0:00 /usr/share/code/code --max-old-space-size=3072 /usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js --syntaxOnly --useInferredProjectPerProjectRoot --disableAutomaticTypingAcquisition --cancellationPipeName /tmp/vscode-typescript1000/1a04afa53ad2c808a175/tscancellation-6e68dde7e616e95d9875.tmp* --globalPlugins typescript-vscode-sh-plugin,@vsintellicode/typescript-intellicode-plugin --pluginProbeLocations /usr/share/code/resources/app/extensions/typescript-language-features,/home/pedro/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.2.5 --locale en --noGetErrOnBackgroundUpdate --validateDefaultNpmLocation
+pedro     5254  0.1  2.2 778036 184700 ?       Sl   10:36   0:30 /usr/share/code/code --max-old-space-size=3072 /usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js --useInferredProjectPerProjectRoot --enableTelemetry --cancellationPipeName /tmp/vscode-typescript1000/1a04afa53ad2c808a175/tscancellation-a5c4a269ad2f62ba2ae8.tmp* --globalPlugins typescript-vscode-sh-plugin,@vsintellicode/typescript-intellicode-plugin --pluginProbeLocations /usr/share/code/resources/app/extensions/typescript-language-features,/home/pedro/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.2.5 --locale en --noGetErrOnBackgroundUpdate --validateDefaultNpmLocation
+pedro     5272  0.0  0.8 658496 66756 ?        Sl   10:36   0:23 /usr/share/code/code /usr/share/code/resources/app/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /home/pedro/.cache/typescript/3.7 --enableTelemetry --typesMapLocation /usr/share/code/resources/app/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+pedro     5295  0.0  0.0   4628   824 ?        S    10:37   0:00 sh -c /home/pedro/eclipse/jee-2019-06/eclipse/eclipse
+pedro     5296  0.0  0.2 321248 16372 ?        Sl   10:37   0:00 /home/pedro/eclipse/jee-2019-06/eclipse/eclipse
+pedro     5893  0.0  0.3 598436 32124 ?        Sl   10:46   0:01 /usr/share/code/code /usr/share/code/resources/app/extensions/json-language-features/server/dist/jsonServerMain --node-ipc --clientProcessId=4978
+pedro     5934  0.0  0.1 803656 13700 pts/0    Sl+  10:46   0:00 npm
+pedro     5945  0.0  0.0   4636   864 pts/0    S+   10:46   0:00 sh -c react-scripts start
+pedro     5946  0.0  0.1 562892  8696 pts/0    Sl+  10:46   0:00 node /home/pedro/workspace/cams/cams-client/node_modules/.bin/react-scripts start
+pedro     5953  0.0  1.5 2036308 123428 pts/0  Sl+  10:46   0:11 node /home/pedro/workspace/cams/cams-client/node_modules/react-scripts/scripts/start.js
+pedro     5980  0.0  0.0 352816  6808 ?        Sl   10:47   0:00 /usr/lib/gvfs/gvfsd-http --spawner :1.32 /org/gtk/gvfs/exec_spaw/6
+pedro     6079  0.0  0.4 638004 32884 ?        Ssl  10:47   0:18 /usr/lib/gnome-terminal/gnome-terminal-server
+pedro     6448  0.0  0.0   4628   856 ?        S    10:49   0:00 sh -c /home/pedro/Postman/Postman
+pedro     6450  0.0  0.0  10540   752 ?        S    10:49   0:00 /home/pedro/Postman/Postman
+pedro     6451  0.0  0.0   4628   856 ?        S    10:49   0:00 sh -c /home/pedro/Postman/app/_Postman 
+pedro     6452  0.7  1.6 1599976 135424 ?      Sl   10:49   3:04 /home/pedro/Postman/app/_Postman
+pedro     6454  0.0  0.2 364732 21044 ?        S    10:49   0:00 /home/pedro/Postman/app/_Postman --type=zygote --no-sandbox
+pedro     6489  0.0  0.7 590712 62096 ?        Sl   10:50   0:02 /home/pedro/Postman/app/_Postman --type=gpu-process --no-sandbox --gpu-preferences=KAAAAAAAAACAAACAAQAAAAAAAAAAAGAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --service-request-channel-token=3DF557DE3980A0127C7B0E9292FE8767
+pedro     6521  0.0  0.5 1140700 46680 ?       Sl   10:50   0:04 /home/pedro/Postman/app/_Postman --type=renderer --no-sandbox --service-pipe-token=B205C0F76753067AFDDB5C57C083340A --lang=pt-BR --app-path=/home/pedro/Postman/app/resources/app --node-integration=true --webview-tag=true --no-sandbox --background-color=#E8E0CB --num-raster-threads=4 --enable-main-frame-before-activation --enable-compositor-image-animations --service-request-channel-token=B205C0F76753067AFDDB5C57C083340A --renderer-client-id=6 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro     6557  0.2  2.4 1421172 194736 ?      Sl   10:50   0:53 /home/pedro/Postman/app/_Postman --type=renderer --no-sandbox --service-pipe-token=FF22616378670AAD2659256B00C3C236 --lang=pt-BR --app-path=/home/pedro/Postman/app/resources/app --node-integration=true --webview-tag=true --no-sandbox --background-color=#fff --guest-instance-id=1 --enable-blink-features --disable-blink-features --num-raster-threads=4 --enable-main-frame-before-activation --enable-compositor-image-animations --service-request-channel-token=FF22616378670AAD2659256B00C3C236 --renderer-client-id=8 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro     6600  0.0  0.6 1141212 54712 ?       Sl   10:50   0:08 /home/pedro/Postman/app/_Postman --type=renderer --no-sandbox --service-pipe-token=620C4440F19A048B282BF03622CD369B --lang=pt-BR --app-path=/home/pedro/Postman/app/resources/app --node-integration=true --webview-tag=true --no-sandbox --background-color=#E8E0CB --num-raster-threads=4 --enable-main-frame-before-activation --enable-compositor-image-animations --service-request-channel-token=620C4440F19A048B282BF03622CD369B --renderer-client-id=10 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro     6623  0.3  3.9 3701212 317080 ?      Sl   10:50   1:31 /home/pedro/Postman/app/_Postman --type=renderer --no-sandbox --service-pipe-token=1EDF027A51170258E86FA723342F6E61 --lang=pt-BR --app-path=/home/pedro/Postman/app/resources/app --node-integration=true --webview-tag=true --no-sandbox --background-color=#fff --guest-instance-id=2 --enable-blink-features --disable-blink-features --num-raster-threads=4 --enable-main-frame-before-activation --enable-compositor-image-animations --service-request-channel-token=1EDF027A51170258E86FA723342F6E61 --renderer-client-id=12 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+root      9694  0.0  0.0      0     0 ?        I    16:40   0:02 [kworker/5:2]
+root     10472  0.1  0.0      0     0 ?        I    16:44   0:02 [kworker/u16:3]
+root     10561  0.0  0.0      0     0 ?        I    16:47   0:01 [kworker/2:4]
+root     10605  0.0  0.0      0     0 ?        I    16:47   0:00 [kworker/3:7]
+root     10627  0.0  0.0      0     0 ?        I    16:49   0:01 [kworker/u16:0]
+pedro    10633  6.6  2.8 989912 228272 ?       SLl  16:51   1:40 /opt/google/chrome/chrome
+pedro    10640  0.0  0.0   7616   828 ?        S    16:51   0:00 cat
+pedro    10641  0.0  0.0   7616   828 ?        S    16:51   0:00 cat
+pedro    10644  0.0  0.7 446152 59392 ?        S    16:51   0:00 /opt/google/chrome/chrome --type=zygote --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198,
+pedro    10645  0.0  0.0  27508  4180 ?        S    16:51   0:00 /opt/google/chrome/nacl_helper
+pedro    10648  0.0  0.1 446152 15048 ?        S    16:51   0:00 /opt/google/chrome/chrome --type=zygote --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198,
+pedro    10672  1.7  1.0 549280 87744 ?        SLl  16:51   0:25 /opt/google/chrome/chrome --type=utility --field-trial-handle=10157086908615241765,2910801679355637790,131072 --lang=pt-BR --service-sandbox-type=network --disable-webrtc-apm-in-audio-service --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --service-request-channel-token=13502927192411271242 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro    10701  8.1  1.7 618984 138944 ?       Sl   16:51   2:01 /opt/google/chrome/chrome --type=gpu-process --field-trial-handle=10157086908615241765,2910801679355637790,131072 --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --use-gl=swiftshader-webgl --service-request-channel-token=16735297518059631227
+pedro    10703  0.0  0.1 411000 14372 ?        S    16:51   0:00 /opt/google/chrome/chrome --type=broker
+pedro    10726  0.1  1.3 764280 108440 ?       Sl   16:51   0:02 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=10157086908615241765,2910801679355637790,131072 --disable-gpu-compositing --lang=pt-BR --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=15787360111513112677 --renderer-client-id=4 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro    10915  0.0  0.0  25992  7712 pts/2    Ss   11:32   0:00 bash
+pedro    10942  0.5  1.3 769624 110820 ?       Sl   16:51   0:07 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=10157086908615241765,2910801679355637790,131072 --disable-gpu-compositing --lang=pt-BR --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=985452296901172455 --renderer-client-id=16 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+root     10971  0.1  0.0      0     0 ?        I    16:51   0:01 [kworker/0:0]
+pedro    11038  0.5  1.3 772848 109100 ?       Sl   16:52   0:08 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=10157086908615241765,2910801679355637790,131072 --disable-gpu-compositing --lang=pt-BR --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=550262689301493531 --renderer-client-id=21 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+root     11207  0.0  0.0      0     0 ?        I    16:53   0:00 [kworker/6:0]
+root     11265  0.0  0.0      0     0 ?        I    16:54   0:00 [kworker/4:1]
+root     11362  0.0  0.0      0     0 ?        I    16:54   0:00 [kworker/1:0]
+root     11379  0.0  0.0      0     0 ?        I    16:54   0:00 [kworker/7:1]
+root     11676  0.0  0.0      0     0 ?        I    16:57   0:00 [kworker/u16:1]
+root     11873  0.0  0.0      0     0 ?        I    16:59   0:00 [kworker/4:2]
+root     11876  0.0  0.0      0     0 ?        I    16:59   0:00 [kworker/1:1]
+root     12013  0.0  0.0      0     0 ?        I    17:01   0:00 [kworker/6:1]
+pedro    12018  0.1  0.6 746368 53464 ?        Sl   17:01   0:01 /opt/google/chrome/chrome --type=utility --field-trial-handle=10157086908615241765,2910801679355637790,131072 --lang=pt-BR --service-sandbox-type=audio --disable-webrtc-apm-in-audio-service --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --service-request-channel-token=4439728388918092532 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+root     12032  0.0  0.0      0     0 ?        I    17:01   0:00 [kworker/2:1]
+root     12038  0.0  0.0      0     0 ?        I    17:01   0:00 [kworker/5:1]
+root     12040  0.0  0.0      0     0 ?        I    17:01   0:00 [kworker/7:0]
+root     12041  0.0  0.0      0     0 ?        I    17:01   0:00 [kworker/3:1]
+root     12381  0.0  0.0      0     0 ?        I    17:04   0:00 [kworker/0:2]
+pedro    12393  1.1  1.4 774984 117084 ?       Sl   17:06   0:06 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=10157086908615241765,2910801679355637790,131072 --disable-gpu-compositing --lang=pt-BR --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=4519096479572030273 --renderer-client-id=68 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro    12428  0.2  1.0 746468 84732 ?        Sl   17:08   0:01 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=10157086908615241765,2910801679355637790,131072 --disable-gpu-compositing --lang=pt-BR --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=7115312975040375803 --renderer-client-id=69 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro    12454  0.0  1.1 733392 90508 ?        Sl   17:08   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=10157086908615241765,2910801679355637790,131072 --disable-gpu-compositing --lang=pt-BR --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=1549188332069043563 --renderer-client-id=70 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+root     13266  0.0  0.1 366576 13364 ?        Ssl  17:09   0:00 /usr/lib/packagekit/packagekitd
+root     14352  0.0  0.0      0     0 ?        I    17:09   0:00 [kworker/u16:2]
+root     14353  0.0  0.0      0     0 ?        I    17:09   0:00 [kworker/6:2]
+root     14354  0.0  0.0      0     0 ?        I    17:09   0:00 [kworker/1:2]
+root     14606  0.0  0.0      0     0 ?        I    17:10   0:00 [kworker/7:2]
+root     14725  0.2  0.0      0     0 ?        I    17:11   0:00 [kworker/5:0]
+root     15439  0.0  0.0      0     0 ?        I    17:12   0:00 [kworker/0:1]
+pedro    15460 13.0  2.7 1110400 219788 ?      Sl   17:12   0:24 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=10157086908615241765,2910801679355637790,131072 --disable-gpu-compositing --lang=pt-BR --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=3494933893029979953 --renderer-client-id=76 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+root     15806  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/u16:4]
+root     15826  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/3:0]
+root     15830  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/3:2]
+root     15831  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/3:3]
+root     15832  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/3:4]
+root     15833  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/3:5]
+root     15834  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/3:6]
+root     16607  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/1:3]
+root     16608  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/1:4]
+root     16609  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/1:5]
+root     16610  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/1:6]
+root     16611  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/1:7]
+rabbitmq 16638  0.0  0.0   4628   860 ?        Ss   17:13   0:00 /bin/sh /usr/sbin/rabbitmq-server
+root     16640  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/6:3]
+root     16641  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/6:4]
+root     16642  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/6:5]
+root     16643  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/6:6]
+root     16644  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/6:7]
+rabbitmq 16652  0.0  0.0   4628  1812 ?        S    17:13   0:00 /bin/sh /usr/lib/rabbitmq/bin/rabbitmq-server
+rabbitmq 16830  0.0  0.0  26852   204 ?        S    17:13   0:00 /usr/lib/erlang/erts-9.2/bin/epmd -daemon
+rabbitmq 16947  2.8  0.7 5351768 62804 ?       Sl   17:13   0:04 /usr/lib/erlang/erts-9.2/bin/beam.smp -W w -A 128 -P 1048576 -t 5000000 -stbt db -zdbbl 32000 -K true -B i -- -root /usr/lib/erlang -progname erl -- -home /var/lib/rabbitmq -- -pa /usr/lib/rabbitmq/lib/rabbitmq_server-3.6.10/ebin -noshell -noinput -s rabbit boot -sname rabbit@pedro-desktop -boot start_sasl -kernel inet_default_connect_options [{nodelay,true}] -sasl errlog_type error -sasl sasl_error_logger false -rabbit error_logger {file,"/var/log/rabbitmq/rabbit@pedro-desktop.log"} -rabbit sasl_error_logger {file,"/var/log/rabbitmq/rabbit@pedro-desktop-sasl.log"} -rabbit enabled_plugins_file "/etc/rabbitmq/enabled_plugins" -rabbit plugins_dir "/usr/lib/rabbitmq/plugins:/usr/lib/rabbitmq/lib/rabbitmq_server-3.6.10/plugins" -rabbit plugins_expand_dir "/var/lib/rabbitmq/mnesia/rabbit@pedro-desktop-plugins-expand" -os_mon start_cpu_sup false -os_mon start_disksup false -os_mon start_memsup false -mnesia dir "/var/lib/rabbitmq/mnesia/rabbit@pedro-desktop" -kernel inet_dist_listen_min 25672 -kernel inet_dist_listen_max 25672
+rabbitmq 17147  0.0  0.0   4520   812 ?        Ss   17:13   0:00 erl_child_setup 65536
+rabbitmq 17238  0.0  0.0   8264  1164 ?        Ss   17:13   0:00 inet_gethost 4
+rabbitmq 17239  0.0  0.0  10384  1844 ?        S    17:13   0:00 inet_gethost 4
+root     17261  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/0:3]
+root     17262  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/0:4]
+root     17263  0.1  0.0      0     0 ?        I    17:13   0:00 [kworker/0:5]
+root     17264  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/0:6]
+root     17265  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/0:7]
+root     17351  0.0  0.0      0     0 ?        I    17:14   0:00 [kworker/2:0]
+root     17352  0.0  0.0      0     0 ?        I    17:14   0:00 [kworker/4:0]
+pedro    17398  1.9  1.5 783464 125668 ?       Sl   17:14   0:01 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=10157086908615241765,2910801679355637790,131072 --disable-gpu-compositing --lang=pt-BR --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=11937929809418281594 --renderer-client-id=87 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro    17421  7.4  2.0 822656 165976 ?       Sl   17:14   0:05 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=10157086908615241765,2910801679355637790,131072 --disable-gpu-compositing --lang=pt-BR --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=901132775736649435 --renderer-client-id=88 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro    17447  0.3  1.0 728940 85108 ?        Sl   17:14   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=10157086908615241765,2910801679355637790,131072 --disable-gpu-compositing --lang=pt-BR --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=12413496235803256125 --renderer-client-id=90 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro    17460  1.3  1.0 733660 88384 ?        Sl   17:14   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=10157086908615241765,2910801679355637790,131072 --disable-gpu-compositing --lang=pt-BR --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=14541281991896646353 --renderer-client-id=91 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro    17489  0.0  0.6 708520 53720 ?        Sl   17:15   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=10157086908615241765,2910801679355637790,131072 --disable-gpu-compositing --lang=pt-BR --enable-crash-reporter=46bf343d-62f9-4020-b525-c56f91442198, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=5756292771786273894 --renderer-client-id=93 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+pedro    17564  0.0  0.0  39760  3776 pts/2    R+   17:16   0:00 ps -aux
+pedro    17565  0.0  0.0   9856  1028 pts/2    R+   17:16   0:00 less
+pedro    22833  5.7 14.7 92464832 1193672 ?    Sl   14:42   8:50 /usr/lib/jvm/java-8-jdk1.8.0_221/bin/java -Dosgi.requiredJavaVersion=1.8 -Dosgi.instance.area.default=@user.home/eclipse-workspace -XX:+UseG1GC -XX:+UseStringDeduplication -Dosgi.requiredJavaVersion=1.8 -Dosgi.dataAreaRequiresExplicitInit=true -Xms256m -Xmx1024m -Declipse.p2.max.threads=10 -Doomph.update.url=http://download.eclipse.org/oomph/updates/milestone/latest -Doomph.redirection.index.redirection=index:/->http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/ -javaagent:/home/pedro/eclipse/jee-2019-06/eclipse/lombok.jar -jar /home/pedro/eclipse/jee-2019-06/eclipse//plugins/org.eclipse.equinox.launcher_1.5.400.v20190515-0925.jar -data file:/home/pedro/workspace/ -os linux -ws gtk -arch x86_64 -showsplash -launcher /home/pedro/eclipse/jee-2019-06/eclipse/eclipse -name Eclipse --launcher.library /home/pedro/.p2/pool/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.1000.v20190125-2016/eclipse_1801.so -startup /home/pedro/eclipse/jee-2019-06/eclipse//plugins/org.eclipse.equinox.launcher_1.5.400.v20190515-0925.jar --launcher.appendVmargs -exitdata 1a8007 -product org.eclipse.epp.package.jee.product -vm /usr/lib/jvm/java-8-jdk1.8.0_221/bin/java -vmargs -Dosgi.requiredJavaVersion=1.8 -Dosgi.instance.area.default=@user.home/eclipse-workspace -XX:+UseG1GC -XX:+UseStringDeduplication -Dosgi.requiredJavaVersion=1.8 -Dosgi.dataAreaRequiresExplicitInit=true -Xms256m -Xmx1024m -Declipse.p2.max.threads=10 -Doomph.update.url=http://download.eclipse.org/oomph/updates/milestone/latest -Doomph.redirection.index.redirection=index:/->http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/ -javaagent:/home/pedro/eclipse/jee-2019-06/eclipse/lombok.jar -jar /home/pedro/eclipse/jee-2019-06/eclipse//plugins/org.eclipse.equinox.launcher_1.5.400.v20190515-0925.jar
+pedro    23626  0.0  0.3 103247752 31068 ?     SLl  14:50   0:04 /usr/lib/x86_64-linux-gnu/webkit2gtk-4.0/WebKitWebProcess 2 213
+pedro    23630  0.0  0.2 86091764 21444 ?      SLl  14:50   0:00 /usr/lib/x86_64-linux-gnu/webkit2gtk-4.0/WebKitNetworkProcess 3 213
+pedro    23651  0.0  0.0   4628   828 ?        S    14:50   0:00 sh -c /usr/lib/x86_64-linux-gnu/libproxy/0.4.14/pxgsettings org.gnome.system.proxy org.gnome.system.proxy.http org.gnome.system.proxy.https org.gnome.system.proxy.ftp org.gnome.system.proxy.socks
+pedro    23653  0.0  0.0 273332  5312 ?        Sl   14:50   0:00 /usr/lib/x86_64-linux-gnu/libproxy/0.4.14/pxgsettings org.gnome.system.proxy org.gnome.system.proxy.http org.gnome.system.proxy.https org.gnome.system.proxy.ftp org.gnome.system.proxy.socks
+pedro    26484  0.0  0.0  25992  7624 pts/1    Ss+  15:01   0:00 bash

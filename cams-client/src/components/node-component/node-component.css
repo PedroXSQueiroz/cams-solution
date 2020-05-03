@@ -1,0 +1,22 @@
+.card .card-header
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .card-header h4
+{
+    margin: 0;
+}
+
+.card .card-header i 
+{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.card-body
+{
+    padding: 0;
+}
