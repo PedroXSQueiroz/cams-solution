@@ -28,7 +28,7 @@ services:
     restart: always
     ports: 
       - "8081:8081"
-      - "5005:5005"
+      - "5006:5006"
     volumes: 
       - /home/pedro/workspace/cams/cams-resource-server/:/server/
       - $HOME/.m2:/root/.m2
@@ -74,7 +74,6 @@ services:
     stdin_open: true
     ports: 
       - "3000:3000"
-      - "3001:3001"
     volumes:
       - /home/pedro/workspace/cams/cams-client/:/client/
       - /home/pedro/workspace/cams/cams-client/_logs/:/root/.npm/_logs
@@ -84,6 +83,7 @@ services:
       - RESOURCE_PROTOCOL=http
       - HUB_HOST=hub-server
       - HUB_OUT_PORT=8085
+      - FRONT_PORT=3000
     networks: 
       server-node:
         aliases: 
@@ -137,6 +137,29 @@ services:
           - "hub-client"
     links:
       - server-messaging
+
+  client-front:
+    container_name: client-front
+    hostname: client-front
+    image: cams-client
+    restart: always
+    stdin_open: true
+    ports: 
+      - "3002:3002"
+    volumes:
+      - /home/pedro/workspace/cams/cams-client/:/client/
+      - /home/pedro/workspace/cams/cams-client/_logs/:/root/.npm/_logs
+    environment: 
+      - RESOURCE_HOST=client
+      - RESOURCE_PORT=8082
+      - RESOURCE_PROTOCOL=http
+      - HUB_HOST=hub-client
+      - HUB_OUT_PORT=8086
+      - FRONT_PORT=3002
+    networks: 
+      server-node:
+        aliases: 
+          - "server-front"
 
 networks:
   server-node:

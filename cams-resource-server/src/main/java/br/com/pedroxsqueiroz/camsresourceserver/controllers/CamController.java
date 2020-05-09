@@ -11,9 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -51,6 +53,22 @@ public class CamController{
 	{
 		return this.service.save(cam);
 	}
+	
+	@PutMapping(value = "/{id}")
+	@ResponseBody
+	public CamModel update(@PathVariable("id") Integer id, @RequestBody CamModel cam) 
+	{
+		return this.service.update(id, cam);
+	}
+	
+	@DeleteMapping(value="/{id}")
+	@ResponseBody
+	public void delete(@PathVariable("id") Integer id) 
+	{
+		this.service.delete(id);
+	}
+	
+	
 	
 	@PostConstruct
 	public void setUpMessagesFunctions() throws IOException, ServerNotRegisteredException, TimeoutException 

@@ -12,7 +12,10 @@ import './App.css';
 import ServerService from './services/server-service';
 
 import CamViewComponent from './components/cam-view-component/cam-view-component';
+import CamsListComponent from './components/cams-list-component/cams-list-component';
+import ServerListComponent from './components/server-list-component/server-list-component';
 import HomeComponent from './components/home-component/home-component';
+import ModalService from './services/modal-service';
 
 class App extends React.Component {
 
@@ -21,7 +24,6 @@ class App extends React.Component {
     super();
 
     console.log(process.env.REACT_APP_RESOURCE_URL);
-
   }
 
   async getOwnData() {
@@ -48,7 +50,6 @@ class App extends React.Component {
     });
 
   }
-
 
   render() {
 
@@ -93,16 +94,15 @@ class App extends React.Component {
 
               <Route path="/cam-stream" component={CamViewComponent} />
 
+              <Route path="/cams" component={CamsListComponent} />
+
+              <Route path="/servers" component={ServerListComponent} />
+
             </Switch>
 
           </div>
 
         </Router>
-
-        <div>
-
-        </div>
-
 
       </div>
     );

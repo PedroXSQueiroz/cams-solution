@@ -9,9 +9,9 @@ export default class ClientService
         return response.json();
     }
 
-    async getCamerasFromClient(camId)
+    async getCamerasFromClient(clientId)
     {
-        let camsRequest = new Request(`${process.env.REACT_APP_RESOURCE_URL}/clients/${camId}/cams`);
+        let camsRequest = new Request(`${process.env.REACT_APP_RESOURCE_URL}/clients/${clientId}/cams`);
 
         let response = await fetch(camsRequest);
 

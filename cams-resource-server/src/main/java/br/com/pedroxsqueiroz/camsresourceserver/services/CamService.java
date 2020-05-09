@@ -74,6 +74,16 @@ public class CamService extends AbstractService<CamModel>{
 		}
 		
 	}
+
+	public CamModel update(Integer id, CamModel cam) {
+		
+		if(this.dao.existsById(id)) 
+		{
+			//estourar exceção
+		}
+		
+		return this.dao.save(cam);
+	}
 	
 	
 }

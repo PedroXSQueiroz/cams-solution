@@ -56,6 +56,12 @@ public class AbstractService<T> {
 	}
 	
 	@Transactional
+	public void delete(T node) 
+	{
+		this.getDao().delete(node);
+	}
+	
+	@Transactional
 	public T save(T node) 
 	{
 		this.getDao().save(node);

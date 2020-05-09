@@ -54,6 +54,28 @@ public class ServerService extends AbstractNodeService<ServerModel> {
 
 		return save;
 	}
+	
+	@Override
+	public void delete(Integer id) {
+
+		ServerModel serverModel = this.get(id);
+		
+		ClientModel thisAsClient = new ClientModel(this.thisClientConfig);
+		this.unregisterClient(serverModel.getAddress(), thisAsClient);
+		
+		super.delete(id);
+	}
+
+	private void unregisterClient(String serverAddress, ClientModel client) {
+		
+		RestTemplate restTemplate = new RestTemplate();
+
+		String saveClientUrl = String.format("%s/delete/client/", serverAddress);
+
+		ResponseEntity<ClientModel> saveClientResponse = restTemplate.postForEntity(saveClientUrl, client,
+				ClientModel.class);
+		
+	}
 
 	public NodeModel findByKey(String nodeKey) throws ServerNotRegisteredException {
 		

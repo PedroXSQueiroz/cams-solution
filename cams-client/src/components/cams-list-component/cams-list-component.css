@@ -1,0 +1,9 @@
+tr td:last-child i {
+    margin: 0 0.5rem;
+}
+
+.list-header
+{
+    display: flex;
+    justify-content: space-between;
+}
