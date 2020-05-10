@@ -1,12 +1,16 @@
 package br.com.pedroxsqueiroz.camsresourceserver.services;
 
+import java.io.IOException;
 import java.util.Optional;
+import java.util.concurrent.TimeoutException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import com.fasterxml.jackson.databind.JsonNode;
 
 import br.com.pedroxsqueiroz.camsresourceserver.config.NodeConfig;
 import br.com.pedroxsqueiroz.camsresourceserver.exceptions.ServerNotRegisteredException;
@@ -25,7 +29,7 @@ public class ServerService extends AbstractNodeService<ServerModel> {
 	@Autowired
 	private NodeConfig thisClientConfig;
 
-	public void registerClient(String serverAddress, ClientModel client) {
+	public void registerClientIn(String serverAddress, ClientModel client) {
 
 		RestTemplate restTemplate = new RestTemplate();
 
@@ -43,7 +47,7 @@ public class ServerService extends AbstractNodeService<ServerModel> {
 
 		// SELF REGISTER AS CLIENT ON SERVER
 		ClientModel thisAsClient = new ClientModel(this.thisClientConfig);
-		this.registerClient(serverAddress, thisAsClient);
+		this.registerClientIn(serverAddress, thisAsClient);
 		
 		NodeConfig serverConfig = this.getNodeConfig(serverAddress);
 		ServerModel server = new ServerModel(serverConfig);
@@ -58,22 +62,31 @@ public class ServerService extends AbstractNodeService<ServerModel> {
 	@Override
 	public void delete(Integer id) {
 
-		ServerModel serverModel = this.get(id);
 		
-		ClientModel thisAsClient = new ClientModel(this.thisClientConfig);
-		this.unregisterClient(serverModel.getAddress(), thisAsClient);
+		try 
+		{
+			ServerModel serverModel = this.get(id);
+			
+			ClientModel thisAsClient = new ClientModel(this.thisClientConfig);
+			this.unregisterClientIn(serverModel, thisAsClient);
+			
+			super.delete(id);
+
+		} catch (IOException | InterruptedException | ServerNotRegisteredException | TimeoutException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		super.delete(id);
 	}
 
-	private void unregisterClient(String serverAddress, ClientModel client) {
+	private void unregisterClientIn(ServerModel server, ClientModel clientModel) throws IOException, InterruptedException, ServerNotRegisteredException, TimeoutException {
 		
-		RestTemplate restTemplate = new RestTemplate();
+		String queue = String.format("delete.client", server.getKey());
+		
+		JsonNode unregisterResponse = this.messagingService.send(server, queue, clientModel, JsonNode.class);
 
-		String saveClientUrl = String.format("%s/delete/client/", serverAddress);
-
-		ResponseEntity<ClientModel> saveClientResponse = restTemplate.postForEntity(saveClientUrl, client,
-				ClientModel.class);
+		//TODO: validate response
+		
 		
 	}
 

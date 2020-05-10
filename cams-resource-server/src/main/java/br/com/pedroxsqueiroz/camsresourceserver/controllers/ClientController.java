@@ -76,7 +76,7 @@ public class ClientController extends AbstractNodeController<ClientModel> {
 
 	@PostConstruct
 	void setUpMessagesFunctions() throws IOException, ServerNotRegisteredException, TimeoutException {
-		this.messagingService.on("delete/client", (messageTag, message) -> {
+		this.messagingService.on("delete.client", (messageTag, message) -> {
 
 			try {
 				

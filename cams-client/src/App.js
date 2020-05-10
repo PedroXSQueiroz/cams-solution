@@ -6,7 +6,6 @@ import {
   Link
 } from "react-router-dom";
 
-import logo from './logo.svg';
 import './App.css';
 
 import ServerService from './services/server-service';
@@ -15,7 +14,6 @@ import CamViewComponent from './components/cam-view-component/cam-view-component
 import CamsListComponent from './components/cams-list-component/cams-list-component';
 import ServerListComponent from './components/server-list-component/server-list-component';
 import HomeComponent from './components/home-component/home-component';
-import ModalService from './services/modal-service';
 
 class App extends React.Component {
 
@@ -51,6 +49,13 @@ class App extends React.Component {
 
   }
 
+  toggleMenu()
+  {
+    this.setState({
+      menuVisible: !this.state.menuVisible
+    })
+  }
+
   render() {
 
     return (
@@ -61,17 +66,17 @@ class App extends React.Component {
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Cams</a>
             
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onClick={() => this.toggleMenu()}>
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav" style={{display: this.state.menuVisible ? 'block' : 'none'}}>
               
               <ul class="navbar-nav">
                 
                 
                 <li class="nav-item active">
-                  <Link class="nav-link" to="/">Pontos de Captura<span class="sr-only">(current)</span></Link>
+                  <Link class="nav-link" to="/">Pontos de Captura</Link>
                 </li>
                 <li class="nav-item">
                   <Link class="nav-link" to="/servers">Pontos de compartilhamento</Link>

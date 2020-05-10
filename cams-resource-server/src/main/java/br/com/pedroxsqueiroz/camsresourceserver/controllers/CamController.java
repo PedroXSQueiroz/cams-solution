@@ -40,6 +40,13 @@ public class CamController{
 	@Autowired
 	private CamService service;
 	
+	@GetMapping("/{id}")
+	@ResponseBody
+	public CamModel get(@PathVariable("id") Integer id) 
+	{
+		return this.service.get(id);
+	}
+	
 	@GetMapping
 	@ResponseBody
 	public List<CamModel> list()
@@ -67,8 +74,6 @@ public class CamController{
 	{
 		this.service.delete(id);
 	}
-	
-	
 	
 	@PostConstruct
 	public void setUpMessagesFunctions() throws IOException, ServerNotRegisteredException, TimeoutException 

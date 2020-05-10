@@ -65,7 +65,12 @@ export default class ServerListComponent extends React.Component
                 await this._listServers();
             }
             , 'Confirmar')
-        
+    }
+
+    async delete(server)
+    {
+        await this._serverService.delete(server);
+        this._listServers();
     }
     
     render()
@@ -99,6 +104,9 @@ export default class ServerListComponent extends React.Component
                                                 <td>{server.name}</td>
                                                 <td>{server.address}</td>    
                                                 <td>
+
+                                                    <i class="fas fa-trash-alt"onClick={() => this.delete(server)} ></i>
+
                                                     {/* <i class="fas fa-edit" onClick={() => this.edit(server)} ></i>
                                                     <i class="fas fa-trash-alt"onClick={() => this.delete(server)} ></i> */}
                                                 </td>

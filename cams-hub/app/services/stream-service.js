@@ -124,6 +124,7 @@ module.exports = class StreamService
         streamProcesses.set(id, streamProcess);
         
         return {
+            cam: cam,
             id: id
         }
     }

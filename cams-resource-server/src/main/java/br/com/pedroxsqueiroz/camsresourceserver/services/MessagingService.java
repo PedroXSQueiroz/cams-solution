@@ -1,7 +1,9 @@
 package br.com.pedroxsqueiroz.camsresourceserver.services;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.TimeoutException;
@@ -26,6 +28,9 @@ public class MessagingService {
 
 	@Autowired
 	private ServerService serverService;
+	
+	@Autowired
+	private ClientService clientService;
 	
 	@Autowired
 	private NodeConfig thisClientConfig;
@@ -74,7 +79,17 @@ public class MessagingService {
 	private void registerQueue( String action, MessageCallback callback )
 			throws IOException, ServerNotRegisteredException, TimeoutException {
 		
-		this.serverService.list().forEach( server -> {
+		List<NodeModel> allRelatedNodes = new ArrayList<NodeModel>();
+		
+		allRelatedNodes.add( this.thisClientConfig );
+		
+		List<ServerModel> servers = this.serverService.list();
+		allRelatedNodes.addAll(servers);
+		
+		List<ClientModel> clients = this.clientService.list();
+		allRelatedNodes.addAll(clients);
+		
+		allRelatedNodes.forEach( server -> {
 			
 			try {
 				
@@ -89,13 +104,13 @@ public class MessagingService {
 		
 	}
 
-	private void registerQueue(String action, MessageCallback callback, ServerModel server)
+	private void registerQueue(String action, MessageCallback callback, NodeModel server)
 			throws IOException, ServerNotRegisteredException, TimeoutException {
 		
 		this.registerQueue(action, callback, server, new ClientModel(this.thisClientConfig));
 	}
 	
-	private void registerQueue(String action, MessageCallback callback, ServerModel server, ClientModel client) throws IOException, ServerNotRegisteredException, TimeoutException 
+	private void registerQueue(String action, MessageCallback callback, NodeModel server, ClientModel client) throws IOException, ServerNotRegisteredException, TimeoutException 
 	{
 		Channel channel = this.channelManager.getChannel(server);
 		

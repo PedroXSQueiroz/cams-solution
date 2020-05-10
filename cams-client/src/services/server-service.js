@@ -36,4 +36,13 @@ export default class ServerService
         return response.json();
     }
 
+    async delete(server)
+    {
+        let deleteRequest = new Request(`${process.env.REACT_APP_RESOURCE_URL}/servers/${server.id}`, {
+            method: 'DELETE'
+        });
+
+        let response = await fetch(deleteRequest);
+    }
+
 }
