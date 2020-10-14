@@ -1,4 +1,13 @@
+echo '###################################################'
+echo 'INSTALL PACKAGES'
+echo '###################################################'
+
+npm cache clean --force
 npm install
+
+echo '###################################################'
+echo 'INSTALL PACKAGES FINSHED'
+echo '###################################################'
 
 echo '----------------------------------'
 echo 'verifying rerource server is up!'

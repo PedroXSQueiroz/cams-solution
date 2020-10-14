@@ -17,6 +17,8 @@ echo '----------------------------------'
 
 echo 'starting hub'
 
-cd /hub/ && npm install
+cd /hub/ && \
+  npm cache clean --force && \
+  npm install && \
 
 nodemon /hub/app/index.js $RESOURCE_SERVER_URL

@@ -1,21 +1,21 @@
 FROM debian
 
 RUN mkdir /hub && \
-    apt update -y && \
-    apt upgrade -y && \
+    DEBIAN_FRONTEND='noninteractive' apt update -y && \
+    DEBIAN_FRONTEND='noninteractive' apt upgrade -y && \
 
-    apt install netcat -y && \
+    DEBIAN_FRONTEND='noninteractive' apt install -y netcat && \
 
-    apt install curl -y && \
+    DEBIAN_FRONTEND='noninteractive' apt install -y curl && \
 
-    apt install yasm libvpx. libx264. && \
+    DEBIAN_FRONTEND='noninteractive' apt install -y yasm libvpx. libx264. && \
     
     echo ------------------------------------------------------------------- && \
     echo REPOSITORY UPDATED && \
     echo ------------------------------------------------------------------- && \
     
     curl -sL https://deb.nodesource.com/setup_12.x | bash  && \
-    apt install nodejs -y && \
+    DEBIAN_FRONTEND='noninteractive' apt install -y nodejs && \
     node -v && \
     npm -v && \
     
@@ -25,11 +25,11 @@ RUN mkdir /hub && \
     echo NODE INSTALLED && \
     echo ------------------------------------------------------------------- && \
 
-    apt install ffmpeg -y && \
+    DEBIAN_FRONTEND='noninteractive' apt install ffmpeg -y && \
 
     echo ------------------------------------------------------------------- && \
     echo FFMPEG INSTALLED && \
-    echo -------------------------------------------------------------------
+    echo ------------------------------------------------------------------- && \
 
 
 ADD ./startup-hub.sh /hub/startup-hub.sh

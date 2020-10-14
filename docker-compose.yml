@@ -30,7 +30,7 @@ services:
       - "8081:8081"
       - "5006:5006"
     volumes: 
-      - /home/pedro/workspace/cams/cams-resource-server/:/server/
+      - ./cams-resource-server/:/server/
       - $HOME/.m2:/root/.m2
     environment:
       - PROFILE=server_docker
@@ -54,7 +54,7 @@ services:
       - "8085:8085"
       - "8084:8084"
     volumes: 
-      - /home/pedro/workspace/cams/cams-hub/:/hub/
+      - ./cams-hub/:/hub/
     environment:
       - RESOURCE_SERVER_HOST=server
       - RESOURCE_SERVER_PORT=8081
@@ -75,8 +75,8 @@ services:
     ports: 
       - "3000:3000"
     volumes:
-      - /home/pedro/workspace/cams/cams-client/:/client/
-      - /home/pedro/workspace/cams/cams-client/_logs/:/root/.npm/_logs
+      - ./cams-client/:/client/
+      - ./cams-client/_logs/:/root/.npm/_logs
     environment: 
       - RESOURCE_HOST=server
       - RESOURCE_PORT=8081
@@ -102,7 +102,7 @@ services:
       - "8082:8082"
       - "5007:5007"
     volumes: 
-      - /home/pedro/workspace/cams/cams-resource-server/:/server/
+      - ./cams-resource-server/:/server/
       - $HOME/.m2:/root/.m2
     environment:
       - PROFILE=client_docker
@@ -126,7 +126,7 @@ services:
       - "8086:8586"
       - "8087:8487"
     volumes: 
-      - /home/pedro/workspace/cams/cams-hub/:/hub/
+      - ./cams-hub/:/hub/
     environment:
       - RESOURCE_SERVER_HOST=client
       - RESOURCE_SERVER_PORT=8082
@@ -147,8 +147,8 @@ services:
     ports: 
       - "3002:3002"
     volumes:
-      - /home/pedro/workspace/cams/cams-client/:/client/
-      - /home/pedro/workspace/cams/cams-client/_logs/:/root/.npm/_logs
+      - ./cams-client/:/client/
+      - ./cams-client/_logs/:/root/.npm/_logs
     environment: 
       - RESOURCE_HOST=client
       - RESOURCE_PORT=8082
