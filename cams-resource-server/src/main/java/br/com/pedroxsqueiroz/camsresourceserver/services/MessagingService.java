@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.TimeoutException;
 
+import com.rabbitmq.client.AMQP;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -151,22 +152,21 @@ public class MessagingService {
 		{
 			this.registerQueue(action, ( tag, message ) -> message.getBody(), new ServerModel(this.thisClientConfig), new ClientModel(destinyNode) );
 		}
-		
-		channel.basicPublish("", queueName, null, requestBody);
-		
+
 		ArrayBlockingQueue<T> awaiter = new ArrayBlockingQueue<T>(1);
-		
-		String consumer = channel.basicConsume(queueResponseName, true, (tag, delivery) -> {
-			
+
+		String consumer = channel.basicConsume(queueResponseName, true, "", (tag, delivery) -> {
+
 			byte[] body = delivery.getBody();
 			ObjectMapper responseBodySerializer = new ObjectMapper();
 			T response = responseBodySerializer.readValue(body, responseType);
-			
+
 			awaiter.offer(response);
-			
+
 		}, consumerTag -> {});
-		
-		
+
+		channel.basicPublish("", queueName, null, requestBody);
+
 		T response = awaiter.take();
 		
 		channel.basicCancel(consumer);
