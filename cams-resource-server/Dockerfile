@@ -4,4 +4,4 @@ RUN mkdir /server
 
 ADD ./startup-server.sh /server/startup-server.sh
 
-ENTRYPOINT ["sh", "/server/startup-server.sh"]
+ENTRYPOINT ["bash", "/server/startup-server.sh"]

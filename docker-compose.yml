@@ -1,6 +1,21 @@
 version: '3.4'
 
 services:
+
+  server-db:
+    container_name: server-db
+    hostname: server-db
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+    volumes:
+      - ./db-server:/var/lib/mysql
+    networks:
+      server-node:
+        aliases:
+          - "server-db"
   
   server-messaging:
     container_name: server-messaging
@@ -36,6 +51,8 @@ services:
       - PROFILE=server_docker
       - MESSAGING_BROKER_URL=server-messaging
       - MESSAGING_BROKER_PORT=5672
+      - DATABASE_SERVER_URL=server-db
+      - DATABASE_SERVER_PORT=3306
       - DEBUG_PORT=5006
     networks: 
       server-node:
