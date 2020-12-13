@@ -140,8 +140,8 @@ services:
     image: cams-hub  
     restart: always
     ports:  
-      - "8086:8586"
-      - "8087:8487"
+      - "8086:8086"
+      - "8087:8087"
     volumes: 
       - ./cams-hub/:/hub/
     environment:
@@ -171,7 +171,7 @@ services:
       - RESOURCE_PORT=8082
       - RESOURCE_PROTOCOL=http
       - HUB_HOST=hub-client
-      - HUB_OUT_PORT=8086
+      - HUB_OUT_PORT=8087
       - FRONT_PORT=3002
     networks: 
       server-node:

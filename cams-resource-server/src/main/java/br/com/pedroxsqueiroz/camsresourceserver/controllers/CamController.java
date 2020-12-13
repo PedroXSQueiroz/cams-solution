@@ -6,6 +6,9 @@ import java.util.concurrent.TimeoutException;
 
 import javax.annotation.PostConstruct;
 
+import br.com.pedroxsqueiroz.camsresourceserver.config.NodeConfig;
+import br.com.pedroxsqueiroz.camsresourceserver.dtos.StreamCam;
+import br.com.pedroxsqueiroz.camsresourceserver.models.ClientModel;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -39,6 +42,8 @@ public class CamController{
 	
 	@Autowired
 	private CamService service;
+	@Autowired
+	private NodeConfig thisNode;
 	
 	@GetMapping("/{id}")
 	@ResponseBody
@@ -66,6 +71,13 @@ public class CamController{
 	public CamModel update(@PathVariable("id") Integer id, @RequestBody CamModel cam) 
 	{
 		return this.service.update(id, cam);
+	}
+
+	@PostMapping(value = "/{id}/stream")
+	@ResponseBody
+	public StreamCam stream(@PathVariable("id") Integer camId) throws InterruptedException, TimeoutException, ServerNotRegisteredException, IOException {
+		CamModel cam = this.service.get(camId);
+		return this.service.startStream( new ClientModel( this.thisNode ), cam);
 	}
 	
 	@DeleteMapping(value="/{id}")

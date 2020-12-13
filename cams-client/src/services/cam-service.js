@@ -49,4 +49,15 @@ export default class CamService
         let response = await fetch(deeleteRequest);
     }
 
+    async stream(camId)
+    {
+        let camsRequest = new Request(`${process.env.REACT_APP_RESOURCE_URL}/cams/${camId}/stream`, {
+            method: 'POST'
+        });
+
+        let response = await fetch(camsRequest);
+
+        return response.json();
+    }
+
 }

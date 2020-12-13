@@ -80,10 +80,14 @@ module.exports = class StreamService
         
         let socketServer = new WebSocket.Server({ port: outputPort, perMessageDeflate: false });
         
+        console.log(`socket: ${outputPort} started`);
+
         socketServer.on('connection', (socket, upgradeReq) => {
             
             let sessionId = (upgradeReq || socket.upgradeReq).url.split('stream/')[1];
             
+            console.log('client connected');
+
             streams.set(sessionId, socket);
             
             socket.on('close', () => {

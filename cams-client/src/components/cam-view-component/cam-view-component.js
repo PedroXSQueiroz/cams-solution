@@ -26,18 +26,23 @@ export default class CamViewComponent extends React.Component
         let clientId = queryParams.has("clientId") ? queryParams.get('clientId') : null; 
         let camId = queryParams.has("camId") ? queryParams.get("camId") : null;
 
-
-        this._clientService.startStream(clientId, camId).then(async stream => {
+        let streamStartedCallback = async stream => {
             
+            console.log('stream loaded');
+
             const streamUrl = `ws://${process.env.REACT_APP_HUB_HOST}:${process.env.REACT_APP_HUB_OUT_PORT}/stream/${stream.id}`;
             
             this.setState({
                 cam: stream.cam,
                 streamUrl: streamUrl,
                 streamUrlEcoded: window.btoa(streamUrl)
-            })
+            });
 
-        });
+        }
+
+        clientId ? 
+            this._clientService.startStream(clientId, camId).then(streamStartedCallback) : 
+            this._camService.stream(camId).then(streamStartedCallback);
 
         this.setState({
             camId: camId,
@@ -52,20 +57,30 @@ export default class CamViewComponent extends React.Component
         return (
             <div>
                 
-                <div>
-                    <h2>{this.state.cam.name}</h2>
-                </div>
-                
                 {
-                    this.state.camId && this.state.clientId && this.state.streamUrl ?
-                    
-                    <object className="cam-view-container" data={"/embeddable-viewer/index.html?stream=" + this.state.streamUrlEcoded} >
-                    </object> 
-                    :
-                    <div>
-                        Câmera ou Ponto de captura indefinido
-                    </div>
+                    this.state.cam && this.state.streamUrl ? 
+                        <div>
+                            <div>
+                                <h2>{this.state.cam.name}</h2>
+                            </div>
+                            
+                            {
+                                this.state.camId && this.state.streamUrl ?
+                                
+                                <object className="cam-view-container" data={"/embeddable-viewer/index.html?stream=" + this.state.streamUrlEcoded} >
+                                </object> 
+                                :
+                                <div>
+                                    Câmera ou Ponto de captura indefinido
+                                </div>
+                            }            
+                        </div> :
+                        <div>
+                            <h2>Carregando</h2>
+                        </div>
                 }
+
+               
             </div>
         )
     }

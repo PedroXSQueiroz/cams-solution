@@ -49,3 +49,8 @@
   vertical-align: middle;
   align-self: center;
 }
+
+.container > h1
+{
+  margin: 0.5rem 0;
+}

@@ -152,6 +152,9 @@ export default class CamsListComponent extends React.Component {
                                                             </Link>
                                                         </td> :
                                                         <td>
+                                                            <Link to={`/cam-stream?camId=${cam.id}`}>
+                                                                <i class="fas fa-eye"></i>
+                                                            </Link>
                                                             <i class="fas fa-edit" onClick={() => this.edit(cam)} ></i>
                                                             <i class="fas fa-trash-alt"onClick={() => this.delete(cam)} ></i>
                                                         </td>
