@@ -8,12 +8,7 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -72,6 +67,32 @@ public class ClientController extends AbstractNodeController<ClientModel> {
 
 		return this.camService.startStream(client, cam);
 
+	}
+	@PostMapping(value = "{clientId}/cam/{camId}/recording/{start}")
+	@ResponseBody
+	public JsonNode setRecordStream(
+			@PathVariable("clientId") Integer clientId,
+			@PathVariable("camId") Integer camId,
+			@PathVariable("start") Boolean start,
+			@RequestParam("path") String path) throws InterruptedException, TimeoutException, ServerNotRegisteredException, IOException {
+
+		ClientModel client = this.service.get(clientId);
+		CamModel cam = this.camService.get(camId);
+
+		Boolean success;
+
+		if(start)
+		{
+			 success = this.camService.startRecordStream( client, cam, path );
+		}else
+		{
+			success = this.camService.stopRecordStream( client, cam );
+		}
+
+		ObjectNode response = JsonNodeFactory.instance.objectNode();
+		response.put("success", success);
+
+		return response;
 	}
 
 	@PostConstruct

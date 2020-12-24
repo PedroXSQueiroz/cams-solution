@@ -28,4 +28,15 @@ export default class ClientService
 
         return response.json();
     }
+
+    async setStreamRecord(start, camId, clientId)
+    {
+        let setRecordStreamRequest = new Request(`${process.env.REACT_APP_RESOURCE_URL}/clients/${clientId}/cam/${camId}/record/${start}?path=/videos/gravacao.mp4`, {
+            method: 'POST'
+        });
+
+        let response = await fetch(setRecordStreamRequest);
+
+        return response.json();
+    }
 }

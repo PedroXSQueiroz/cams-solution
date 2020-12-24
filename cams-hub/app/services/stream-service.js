@@ -5,7 +5,8 @@ var http                = require('http'),
     ServerService       = require('./server-service'),
     MessagingService    = require('./messaging-service'),
     ClientService       = require('./client-service'),
-    url                 = require('url');
+    url                 = require('url'),
+    fs                  = require('fs');
 
 const streams = new Map();
 const streamProcesses = new Map();
@@ -50,6 +51,28 @@ module.exports = class StreamService
 
         });
 
+        await this._messagingService.on('set-record-stream', async (message) => {
+
+            console.log(`recording stream of cam:${message.camId} started`);
+            
+            const currentStream = streams.get(message.sessionId);
+            
+            if(message.start)
+            {
+                console.log(`writing file on ${message.recordPath}`);
+                currentStream.startRecord(message.recordPath);
+            }
+            else if(streams.isRecording)
+            {
+                console.log(`stoping record of ${streams.sessionId}`);
+                currentStream.get(message.sessionId).stopRecord();
+            }
+
+            return {
+                success: true
+            }
+        })
+
     }
 
     setupIn(inputPort) {
@@ -66,12 +89,20 @@ module.exports = class StreamService
                 
                 if (streams.has(sessionId)) 
                 {
-                    streams.get(sessionId).send(data);
+                    const currentStream = streams.get(sessionId);
+                    currentStream.send(data);
+                    
+                    if(currentStream.isRecording)
+                    {
+                        currentStream.fileStream.write(data);
+                    }
+
                 }
                 else 
                 {
                     console.log(`no client attached for stream ${sessionId}`);
                 }
+
             });
         }).listen(inputPort);
     }
@@ -89,9 +120,20 @@ module.exports = class StreamService
             console.log('client connected');
 
             streams.set(sessionId, socket);
+
+            socket.startRecord = (path) => {
+                socket.isRecording = true;
+                socket.pathRecording = path;
+                socket.fileStream = fs.createWriteStream(path);
+            }
             
             socket.on('close', () => {
                 
+                if(socket.isRecording)
+                {
+                    socket.fileStream.close();
+                }
+
                 this.stop(sessionId);
             });
         });
@@ -124,6 +166,7 @@ module.exports = class StreamService
         streamProcess.stderr.on('data', data => {
             console.error(data.toString())
         });
+        
 
         streamProcesses.set(id, streamProcess);
         
@@ -135,7 +178,6 @@ module.exports = class StreamService
 
     async stop(sessionId) 
     {
-        
         let sessionData = url.parse(sessionId, true).query;
         
         let nodeKey = sessionData.node;

@@ -35,7 +35,8 @@ export default class CamViewComponent extends React.Component
             this.setState({
                 cam: stream.cam,
                 streamUrl: streamUrl,
-                streamUrlEcoded: window.btoa(streamUrl)
+                streamUrlEcoded: window.btoa(streamUrl),
+                isRecording: false
             });
 
         }
@@ -49,6 +50,24 @@ export default class CamViewComponent extends React.Component
             clientId: clientId,
             cam:{}
         });
+
+    }
+
+    async toogleRecord()
+    {
+        
+        const toogled = !this.state.isRecording;
+
+        if(this.clientId)
+        {
+            await this._clientService.setStreamRecord(toogled, this.state.camId, this.state.clientId );
+        }
+        else
+        {
+            await this._camService.setStreamRecord(toogled, this.state.camId);
+        }
+
+        this.setState({isRecording: toogled});
 
     }
 
@@ -73,7 +92,15 @@ export default class CamViewComponent extends React.Component
                                 <div>
                                     Câmera ou Ponto de captura indefinido
                                 </div>
-                            }            
+                            }
+
+                            {
+                                this.state.camId && this.state.streamUrl ?
+                                <div className="form-check"> 
+                                    <input className="form-check-input" type="checkbox" onChange={() => this.toogleRecord()} />
+                                    <label class="form-check-label"> Gravando </label>
+                                </div> : null
+                            }           
                         </div> :
                         <div>
                             <h2>Carregando</h2>

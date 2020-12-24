@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeoutException;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -29,11 +30,6 @@ public class CamService extends AbstractService<CamModel>{
 	
 	@Autowired
 	private MessagingService messagingService;
-	
-	public void startStream( CamModel cam, NodeModel destinyModel )
-	{
-		
-	}
 
 	public CamModel getFromClient(ClientModel client, Integer camId) throws IOException, InterruptedException, ServerNotRegisteredException, TimeoutException {
 		
@@ -53,6 +49,27 @@ public class CamService extends AbstractService<CamModel>{
 		streamParams.put("cam",  objectMapper.valueToTree(cam));
 		
 		return messagingService.send(client, "start-stream", streamParams, StreamCam.class);
+	}
+
+	public boolean startRecordStream(ClientModel client, CamModel cam, String path) throws InterruptedException, TimeoutException, ServerNotRegisteredException, IOException {
+		ObjectMapper objectMapper = new ObjectMapper();
+
+		ObjectNode messageParams = JsonNodeFactory.instance.objectNode();
+		messageParams.put("camId", cam.getId());
+		messageParams.put("recordPath", path);
+		messageParams.put("start", true);
+
+		return messagingService.send(client, "set-record-stream", messageParams, JsonNode.class).get("success").asBoolean();
+	}
+
+	public boolean stopRecordStream(ClientModel client, CamModel cam) throws InterruptedException, TimeoutException, ServerNotRegisteredException, IOException {
+		ObjectMapper objectMapper = new ObjectMapper();
+
+		ObjectNode messageParams = JsonNodeFactory.instance.objectNode();
+		messageParams.put("camId", cam.getId());
+		messageParams.put("start", false);
+
+		return messagingService.send(client, "set-record-stream", messageParams, JsonNode.class).get("success").asBoolean();
 	}
 	
 	public List<CamModel> getCamsFromClient(ClientModel client) {

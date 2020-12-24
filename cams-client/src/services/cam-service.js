@@ -60,4 +60,15 @@ export default class CamService
         return response.json();
     }
 
+    async setStreamRecord(start, camId)
+    {
+        let setRecordStreamRequest = new Request(`${process.env.REACT_APP_RESOURCE_URL}/cams/${camId}/record/${start}?path=/videos/gravacao.mp4`, {
+            method: 'POST'
+        });
+
+        let response = await fetch(setRecordStreamRequest);
+
+        return response.json();
+    }
+
 }
